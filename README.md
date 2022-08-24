@@ -1,8 +1,8 @@
-![Lenovo Legion 5 Pro 2021 Linux RGB Keyboard Light Controller](https://i.imgur.com/FhBMS9W.jpg)
+![Lenovo Legion 5 Pro 2022 Linux RGB Keyboard Light Controller](https://i.imgur.com/FhBMS9W.jpg)
 
 # Lenovo Legion 5 Pro 2021 Linux RGB Keyboard Light Controller
 
-This util allows to drive RGB keyboard light on Lenovo Legion 5 Pro 2021 Laptop
+This util allows to drive RGB keyboard light on Lenovo Legion 5 Pro 16iah7h Laptop
 
 ## Requirements
 
@@ -33,7 +33,7 @@ python l5p-kbl.py --help
 Add udev rule if you want to swith light as unprivileged user
 ```
 # /etc/udev/rules.d/99-kblight.rules
-SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c965", MODE="0666"
+SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c975", MODE="0666"
 ```
 
 Reload rules
@@ -173,7 +173,7 @@ Set `Super+Space` keystroke to turn light on and turn it off with single `fn+Spa
   - [ ] Music light accompaniment
 
 ## Payload description
-Device vendor = 048d, product = c965
+Device vendor = 048d, product = c975
 
 ```
 HEADER ........... cc
