@@ -10,6 +10,13 @@ This util allows to drive RGB keyboard light on Lenovo Legion 5 Pro 16iah7h Lapt
 
 ## Install
 
+### Nix
+
+```
+git clone https://github.com/imShara/l5p-kbl
+nix-shell --command ./lightblue.py
+```
+
 ### Regular python
 ```
 git clone https://github.com/imShara/l5p-kbl
@@ -34,6 +41,13 @@ Add udev rule if you want to swith light as unprivileged user
 ```
 # /etc/udev/rules.d/99-kblight.rules
 SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c975", MODE="0666"
+```
+
+or when using NixOS, in your configuration:
+```
+services.udev.extraRules = ''
+  SUBSYSTEM=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c975", MODE="0666"
+'';
 ```
 
 Reload rules
